@@ -65,7 +65,7 @@ jobs:
       # Run tests
       - run: ddev composer test:acceptance:${{ matrix.browser }}
       # Save acceptance reports
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.browser }}-${{ matrix.theme }}-${{ matrix.php-version }}-ar
           path: Build/AcceptanceReports
